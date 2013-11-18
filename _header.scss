@@ -1,0 +1,40 @@
+/* Header */
+
+$header: #fff;
+
+.hero {
+  background: #996633;
+  padding-top: 100px;
+}
+
+.heading {
+  position: relative;
+  overflow: auto;
+}
+
+h1 {
+  color: $header;
+  font-size: 6em;
+  font-family: Helvetica;
+}
+
+.tagline {
+  color: $header;
+  font-size: 3em;
+}
+
+.see-cookies {
+  border: 2px solid white;
+  padding: 2px 10px 5px 10px;
+  font-size: 3.5em;
+  color: $header;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+
+    &:hover {
+    color: #996633;
+    background: white;
+    text-decoration: none;
+    }
+}

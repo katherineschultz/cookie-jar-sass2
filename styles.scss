@@ -1,0 +1,102 @@
+@import "reset";
+@import "compass";
+@import "header";
+@import "mysprites/*.png";
+
+@include all-mysprites-sprites;
+
+@mixin shadow {
+    text-shadow: #333 0 4px;
+    text-transform: uppercase;
+}
+
+$header: #fff;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+.review {
+  font-size: 20px;
+}
+
+.monster:before {
+    @include mysprites-sprites(cookie-monster);
+}
+
+.cookies-bg {
+  background-image: url(images/cookies-bg.jpeg);
+  background-position: left bottom;
+  height: 350px;
+  background-attachment: fixed;
+}
+
+.product {
+  padding-top: 10px;
+  margin-bottom: 10px;
+
+  img {
+    border: 1px solid lightgray;
+    padding: 5px;
+
+      &:hover {
+        border: 1px solid #bc2e00;
+      }
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #bc2e00;
+  border-bottom: 2px solid #bc2e00;
+  padding-bottom: .5em;
+  padding-top: 1.5em;
+  @include shadow;
+}
+
+.quote {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  vertical-align: top;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.spacer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.form-container {
+  background: #3b0e00;
+  color: $header;
+  font-size: 1.5em;
+  padding: 40px;
+}
+
+.form-heading {
+  color: $header;
+  font-weight: normal;
+  border-color: white;
+  padding-top: 0;
+  margin-bottom: 1em;
+  @include single-text-shadow;
+}
+
+.center img {
+  margin: 0 auto;
+}
